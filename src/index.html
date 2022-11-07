@@ -11,7 +11,135 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1>HTML Form</h1>
+    <h1 >HTML Form</h1>
     <script type="text/javascript" src="./main.js"></script>
+
+    <form action="http://localhost:8080/" method="post">
+      <p>Personal information</p>
+      <div class="form__field">
+        <label for="surname">Surname:</label>
+        <input type="text" name="Surname"
+         autocomplete="off" required
+         id="surname">
+      </div>
+
+      <div class="form__field">
+        <label for="name"> Name:</label>
+        <input type="text" name="Name"
+        autocomplete="off" required
+         id="name">
+      </div>
+
+      <div class="form__field">
+        <label for="person_old">How old are You?</label>
+        <input type="number" name="years"
+        minlength="1" maxlength="100"
+        value="12" required
+        id="person_old">
+      </div>
+
+      <div class="form__field">
+        <label for="birth">Full date of birth:</label>
+        <input type="date" name="birth"
+        required id="birth">
+      </div>
+
+      <div class="form__field">
+        <label for="term-of-agreement">I accept the term of the agreement </label>
+        <input type="checkbox" name="remeber"
+        id="term-of-agreement" required>
+      </div>
+    </form>
+
+    <form action="http://localhost:8080/" method="post">
+         Registration
+      <div class="form__field">
+        <label for="email">E-mail:</label>
+        <input type="email" name="email"
+        placeholder="email@example.com" required
+        id="email">
+      </div>
+      <div class="form__field">
+        <label for="password">Password:</label>
+        <input type="password" name="password"
+        required id="password">
+      </div>
+    </form>
+
+    <form action="http://localhost:8080/"
+    method="post">
+
+    An interesting fact about you!
+      <div class="form__field">
+       Do you love cats?
+        <label>
+          <input type="radio" name="animal"
+          value="y">
+        Yes
+        </label>
+
+        <label>
+          <input type="radio" name="animal"
+          value="n">
+        No
+        </label>
+      </div>
+
+      <div class="form__field">
+        <label for="color">What is your favouritr color?</label>
+        <input type="color" id="color"
+        name="color" value="#000000">
+        </label>
+      </div>
+
+      <div class="form__field">
+        <label for="datatime">What time do you go to bed?</label>
+        <input type="datetime-local" name="datatime"
+         id="datatime">
+      </div>
+
+      <div class="form__field">
+        <label for="cars">What are your favorite brand of cars?</label>
+
+        <select name="cars" multiple
+        required id="cars">
+          <option disabled selected></option>
+          <option value="BMW">BMW</option>
+          <option value="Audi">Audi</option>
+          <option value="Lada">Lada</option>
+        </select>
+      </div>
+
+      <div class="form__field">
+        <label for="work">How do you rate our work?</label>
+        <input type="range" name="work"
+        id="work">
+      </div>
+
+    </form>
+
+    <form action="http://localhost:8080/"
+    method="post">
+    Additional info:
+      <div class="form__field">
+        <label for="comments">
+           Comments:
+          <textarea id="comments" name="comments"></textarea>
+        </label>
+      </div>
+      <div class="form__field">
+        <label for="recommend">Would you recommend us?</label>
+        <select name="recommend" id="recommend">
+          <option value="yes">yes</option>
+          <option value="no">no</option>
+        </select>
+
+      </div>
+
+    </form>
+
+    <button type="submit" name="submit">
+      Submit
+    </button>
   </body>
 </html>

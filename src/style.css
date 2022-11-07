@@ -1,1 +1,9 @@
 /* styles go here */
+
+.form__field{
+margin: 20px 0;
+}
+
+input{
+  margin: 10 0px;
+}
