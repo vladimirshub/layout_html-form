@@ -11,175 +11,178 @@
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <h1 >HTML Form</h1>
-    <script type="text/javascript" src="./main.js"></script>
 
     <form action="http://localhost:8080/" method="post">
-      <p>Personal information</p>
-      <div class="form__field">
-        <label for="surname">Surname:</label>
-        <input
-        type="text"
-        name="Surname"
-        autocomplete="off"
-        required
-        id="surname"
-        >
-      </div>
+      <fieldset>
+        <legend>Personal information</legend>
 
-      <div class="form__field">
-        <label for="name"> Name:</label>
-        <input
-        type="text"
-        name="Name"
-        autocomplete="off"
-        required
-        id="name"
-        >
-      </div>
+        <label for="surname" class="form__field">
+          Surname:
+          <input
+          type="text"
+          name="Surname"
+          autocomplete="off"
+          required
+          id="surname"
+          minlength="2"
+          maxlength="32"
+          >
+        </label>
 
-      <div class="form__field">
-        <label for="person_old">How old are You?</label>
-        <input
-        type="number"
-        name="years"
-        minlength="1"
-        maxlength="100"
-        value="12"
-        required
-        id="person_old"
-        >
-      </div>
+        <label for="name" class="form__field">
+          Name:
+          <input
+          type="text"
+          name="Name"
+          autocomplete="off"
+          required
+          id="name"
+          >
+        </label>
 
-      <div class="form__field">
-        <label for="birth">Full date of birth:</label>
-        <input
-        type="date"
-        name="birth"
-        required id="birth"
-        >
-      </div>
+        <label for="person_old" class="form__field">
+          How old are You?
+          <input
+          type="number"
+          name="years"
+          value="12"
+          min="1"
+          max="100"
+          required
+          id="person_old"
+          >
+        </label>
 
-      <div class="form__field">
-        <label for="term-of-agreement">I accept the term of the agreement </label>
-        <input
-        type="checkbox"
-        name="remeber"
-        id="term-of-agreement"
-        required
-        >
-      </div>
-    </form>
+        <label for="birth" class="form__field">
+          Full date of birth:
+          <input
+          type="date"
+          name="birth"
+          required id="birth"
+          >
+        </label>
 
-    <form action="http://localhost:8080/" method="post">
-         Registration
-      <div class="form__field">
-        <label for="email">E-mail:</label>
-        <input
-        type="email"
-        name="email"
-        placeholder="email@example.com"
-        required
-        id="email"
-        >
-      </div>
-      <div class="form__field">
-        <label for="password">Password:</label>
-        <input
-        type="password"
-        name="password"
-        required
-        id="password"
-        >
-      </div>
-    </form>
+        <label for="term-of-agreement" class="form__field">
+          I accept the term of the agreement
+          <input
+          type="checkbox"
+          name="remeber"
+          id="term-of-agreement"
+          required
+          >
+        </label>
+      </fieldset>
 
-    <form action="http://localhost:8080/"
-    method="post">
+      <fieldset>
+        <legend>Registration</legend>
 
-    An interesting fact about you!
-      <div class="form__field">
+        <label for="email" class="form__field">
+          E-mail:
+          <input
+          type="email"
+          name="email"
+          placeholder="email@example.com"
+          required
+          id="email"
+          >
+        </label>
+
+        <label for="password" class="form__field">
+          Password:
+          <input
+          type="password"
+          name="password"
+          required
+          id="password"
+          >
+        </label>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>An interesting fact about you!</legend>
+
+        <label class="form__field">
        Do you love cats?
-        <label>
+          <label>
+            <input
+            type="radio"
+            name="animal"
+            value="y"
+            >
+           Yes
+          </label>
+
+          <label>
+            <input
+            type="radio"
+            name="animal"
+            value="n"
+            >
+           No
+          </label>
+        </label>
+
+        <label for="color" class="form__field">
+          What is your favouritr color?
           <input
-          type="radio"
-          name="animal"
-          value="y"
+          type="color"
+          id="color"
+          name="color"
+          value="#000000"
           >
-        Yes
         </label>
 
-        <label>
+        <label for="datatime" class="form__field">
+          What time do you go to bed?
           <input
-          type="radio"
-          name="animal"
-          value="n"
+          type="time"
+          name="datatime"
+          id="datatime"
+          step="2"
           >
-        No
         </label>
-      </div>
 
-      <div class="form__field">
-        <label for="color">What is your favouritr color?</label>
-        <input
-        type="color"
-        id="color"
-        name="color"
-        value="#000000"
-        >
+        <label for="cars" class="form__field">
+          What are your favorite brand of cars?
+          <select name="cars" id="cars"
+          size="4" multiple>
+            <option value="BMW">BMW</option>
+            <option value="Audi">Audi</option>
+            <option value="Lada">Lada</option>
+            <option></option>
+          </select>
         </label>
-      </div>
 
-      <div class="form__field">
-        <label for="datatime">What time do you go to bed?</label>
-        <input
-        type="datetime-local"
-        name="datatime"
-        id="datatime"
-        >
-      </div>
+        <label for="work" class="form__field">
+            How do you rate our work?
+          <input
+          type="range"
+          name="work"
+          id="work"
+          min="0"
+          max="100"
+          value="0"
+          >
+        </label>
+      </fieldset>
 
-      <div class="form__field">
-        <label for="cars">What are your favorite brand of cars?</label>
+      <fieldset>
+        <legend>Additional info:</legend>
 
-        <select name="cars" multiple
-        required id="cars">
-          <option disabled selected></option>
-          <option value="BMW">BMW</option>
-          <option value="Audi">Audi</option>
-          <option value="Lada">Lada</option>
-        </select>
-      </div>
-
-      <div class="form__field">
-        <label for="work">How do you rate our work?</label>
-        <input
-        type="range"
-        name="work"
-        id="work"
-        >
-      </div>
-
-    </form>
-
-    <form action="http://localhost:8080/"
-    method="post">
-    Additional info:
-      <div class="form__field">
-        <label for="comments">
+        <label for="comments" class="form__field">
            Comments:
           <textarea id="comments" name="comments"></textarea>
         </label>
-      </div>
-      <div class="form__field">
-        <label for="recommend">Would you recommend us?</label>
-        <select name="recommend" id="recommend">
-          <option value="yes">yes</option>
-          <option value="no">no</option>
-        </select>
 
-      </div>
-
+        <label for="recommend" class="form__field">
+          Would you recommend us?
+          <select name="recommend" id="recommend">
+            <option value="yes">yes</option>
+            <option value="no">no</option>
+          </select>
+        </label>
+      </fieldset>
     </form>
 
     <button type="submit" name="submit">
