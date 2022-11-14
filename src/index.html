@@ -102,14 +102,14 @@
         <legend>An interesting fact about you!</legend>
 
         <label class="form__field">
-       Do you love cats?
+          Do you love cats?
           <label>
             <input
               type="radio"
               name="animal"
               value="y"
             >
-           Yes
+             Yes
           </label>
 
           <label>
@@ -118,7 +118,7 @@
               name="animal"
               value="n"
             >
-           No
+             No
           </label>
         </label>
 
@@ -154,7 +154,7 @@
         </label>
 
         <label for="work" class="form__field">
-            How do you rate our work?
+          How do you rate our work?
           <input
             type="range"
             name="work"
@@ -170,13 +170,16 @@
         <legend>Additional info:</legend>
 
         <label for="comments" class="form__field">
-           Comments:
+          Comments:
           <textarea id="comments" name="comments"></textarea>
         </label>
 
         <label for="recommend" class="form__field">
           Would you recommend us?
-          <select name="recommend" id="recommend">
+          <select
+            name="recommend"
+            id="recommend"
+          >
             <option value="yes">yes</option>
             <option value="no">no</option>
           </select>
@@ -187,6 +190,5 @@
     <button type="submit" name="submit">
       Submit
     </button>
-
   </body>
 </html>
